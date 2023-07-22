@@ -2,9 +2,15 @@ import 'package:flutter/material.dart';
 
 class CircularProgressBar extends StatefulWidget {
   const CircularProgressBar(
-      {super.key, this.strokeWidth, this.color, this.begin, this.end});
+      {super.key,
+      this.strokeWidth,
+      this.color,
+      this.begin,
+      this.end,
+      this.textColor});
   final double? strokeWidth;
   final Color? color;
+  final Color? textColor;
   final double? begin;
   final double? end;
 
@@ -60,7 +66,10 @@ class _CircularProgressBarState extends State<CircularProgressBar>
             ),
             Text(
               '${(_animation.value).toStringAsFixed(1)}%',
-              style: const TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.bold,
+                  color: widget.textColor ?? Colors.black),
             ),
           ],
         );

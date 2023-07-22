@@ -24,6 +24,7 @@ class MyApp extends StatelessWidget {
           strokeWidth: 2,
           begin: .5,
           end: 1,
+          textColor: Colors.blue,
         )),
       ),
     );
